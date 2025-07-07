@@ -31,9 +31,6 @@ feature_names = [
     '单原子的d带中心', '团簇的d带中心', 'M的bader电荷', '结合前M的bader电荷', 'M4的bader电荷',
     '结合前M4的bader电荷', 'OH', 'O', 'OOH', 'O-OH', 'OOH-O'
 ]
-@app.route('/predict.html')
-def serve_predict_html():
-    return send_from_directory('.', 'predict.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
