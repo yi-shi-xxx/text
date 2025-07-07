@@ -273,7 +273,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
 
     document.getElementById('result').innerHTML = "正在预测，请稍候...";
     try {
-        const resp = await fetch('https://pttext.zeabur.app/', {
+        const resp = await fetch('https://xxxx.zeabur.app/predict', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
