@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>客服中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'HarmonyOS', '微软雅黑', Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #c0c0c0, #87CEEB); /* 石墨烯渐变背景 */
+    }
+    .customer-service-container {
+        text-align: center;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，增加层次感 */
+    }
+    .customer-service-container h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    .customer-service-container p {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+    .service-content, .service-process, .service-price {
+        margin-bottom: 30px;
+    }
+    .service-content p, .service-process p, .service-price p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+    .customer-service-container button {
+        padding: 12px 24px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        background: #e0dfff; /* 浅紫色背景 */
+        color: #333;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .customer-service-container button:hover {
+        background: #d1c6e4; /* 浅紫色加深 */
+    }
+</style>
+</head>
+<body>
+<div class="customer-service-container">
+    <h1>客服中心</h1>
+    <div class="service-content">
+        <h2>服务内容</h2>
+        <p>我们提供全方位、一站式的客户服务，包括但不限于产品咨询、故障处理、维修保养等。</p>
+    </div>
+    <div class="service-process">
+        <h2>服务流程</h2>
+        <p>1. 提交服务申请 → 2. 客服响应并确认问题 → 3. 安排专业人员上门服务 → 4. 服务完成并反馈。</p>
+    </div>
+    <div class="service-price">
+        <h2>服务价格/付款方式</h2>
+        <p>服务价格根据具体项目而定，付款方式支持现金、支付宝、微信支付等多种方式。</p>
+    </div>
+    <button onclick="window.prompt('请留下您的评价：', '您的评价')">用户评价</button>
+    <button onclick="window.location.href='predict.html'">返回首页</button>
+</div>
+</body>
+</html>
