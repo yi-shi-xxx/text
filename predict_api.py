@@ -92,6 +92,14 @@ def predict():
 def home():
     return redirect('/predict.html')
 
+@app.route('/predict.html')
+def serve_predict_html():
+    return send_from_directory('.', 'predict.html')
+
+@app.route('/customer_service.html')
+def serve_customer_service_html():
+    return send_from_directory('.', 'customer_service.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8080))  # 如果环境变量 PORT 存在，则用它，否则用 5000
