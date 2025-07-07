@@ -7,6 +7,7 @@ print("ORR_model.joblib 存在吗？", os.path.exists("ORR_model.joblib"))
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+from flask import redirect
 import numpy as np
 import joblib
 import copy
@@ -86,6 +87,10 @@ def predict():
         return jsonify({'OER': float(oer_pred), 'ORR': float(orr_pred), '建议': advice})
     except Exception as e:
         return jsonify({'error': str(e)})
+
+@app.route('/')
+def home():
+    return redirect('/predict.html')
 
 
 if __name__ == '__main__':
