@@ -1,3 +1,5 @@
+print("=== 服务开始启动 ===")
+
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import numpy as np
