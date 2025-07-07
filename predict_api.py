@@ -1,11 +1,18 @@
+import os
+
 print("=== 服务开始启动 ===")
+print("当前目录内容：", os.listdir("."))
+print("OER_model.joblib 存在吗？", os.path.exists("OER_model.joblib"))
+print("ORR_model.joblib 存在吗？", os.path.exists("ORR_model.joblib"))
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import numpy as np
 import joblib
 import copy
-import os
+
+app = Flask(__name__)
+CORS(app)
 
 
 app = Flask(__name__)
